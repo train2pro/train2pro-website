@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LMS Login – Train2Pro Learning Portal</title>
+<meta name="description" content="Login to the Train2Pro Learning Management System to access your courses, assessments, and certificates.">
+<script src="nav.js" defer></script>
+<style>
+/* Override nav for LMS login page - hide navbar */
+body { margin: 0; padding: 0; }
+</style>
+</head>
+<body>
+
+<section class="lms-login-page">
+  <div class="lms-login-box">
+    <div class="lms-login-logo">
+      <!-- Logo injected by nav.js but we also show it inline -->
+      <a href="index.html" style="display:inline-block">
+        <span style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:#1A3562">Train<span style="color:#F08030">2</span>Pro</span>
+      </a>
+    </div>
+    <h2>Learning Portal</h2>
+    <p class="lms-subtitle">Sign in to access your courses and assessments</p>
+    
+    <form class="lms-login-form" id="lmsForm" onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="lmsEmail" placeholder="your@email.com" required autocomplete="email" />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="lmsPassword" placeholder="Enter your password" required autocomplete="current-password" />
+      </div>
+      <div class="forgot"><a href="#">Forgot password?</a></div>
+      <button type="submit" class="btn-login">Sign In to LMS</button>
+    </form>
+    
+    <div id="lmsLoading" style="display:none;text-align:center;padding:20px 0">
+      <p style="color:#1A3562;font-size:15px">🔐 Signing you in...</p>
+    </div>
+    
+    <div class="lms-divider"><span>New to Train2Pro LMS?</span></div>
+    
+    <div class="lms-register-link">
+      Don't have an account? <a href="contact.html">Contact Us for Access</a>
+    </div>
+    
+    <div class="lms-portal-features">
+      <div class="lms-portal-feat"><div class="feat-dot"></div>Course Materials</div>
+      <div class="lms-portal-feat"><div class="feat-dot"></div>Assessments</div>
+      <div class="lms-portal-feat"><div class="feat-dot"></div>Certificates</div>
+      <div class="lms-portal-feat"><div class="feat-dot"></div>Progress Tracking</div>
+    </div>
+    
+    <div style="text-align:center;margin-top:20px">
+      <a href="index.html" style="font-size:13px;color:#6b7280">← Back to Website</a>
+    </div>
+  </div>
+</section>
+
+<script>
+function handleLogin(e) {
+  e.preventDefault();
+  document.getElementById('lmsForm').style.display='none';
+  document.getElementById('lmsLoading').style.display='block';
+  // In production: redirect to actual LMS URL after auth
+  setTimeout(() => {
+    // Replace this URL with your actual LMS URL when ready
+    // window.location.href = 'https://your-lms-platform.com/login';
+    document.getElementById('lmsLoading').innerHTML = '<p style="color:#1A3562;font-size:15px">✅ Login portal ready. Please configure your LMS URL.</p><p style="font-size:13px;color:#6b7280;margin-top:8px"><a href="index.html">Return to website →</a></p>';
+  }, 1500);
+}
+</script>
+</body>
+</html>

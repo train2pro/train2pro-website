@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – Train2Pro</title>
+<meta name="description" content="Get in touch with Train2Pro to discuss your corporate training, coaching, or DISC assessment needs.">
+<script src="nav.js" defer></script>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Get in Touch</h1>
+    <p>Tell us your learning need and we'll design the right solution for you</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> › <span>Contact</span></div>
+  </div>
+</div>
+
+<section class="contact-page">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Let's Start a Conversation</h2>
+        <p>Whether you're looking for a single workshop or a comprehensive organizational learning strategy, we'd love to understand your context and explore how Train2Pro can help.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div class="contact-item-text">
+              <h4>Email</h4>
+              <p>info@train2pro.in</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div>
+            <div class="contact-item-text">
+              <h4>Website</h4>
+              <p>www.khanjankadi.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <h4>Location</h4>
+              <p>India (Pan-India delivery available)</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">⏱️</div>
+            <div class="contact-item-text">
+              <h4>Response Time</h4>
+              <p>We respond within 24 business hours</p>
+            </div>
+          </div>
+        </div>
+        <div style="background:#f4f7fc;border-radius:12px;padding:20px">
+          <h4 style="font-size:14px;font-weight:700;color:#1A3562;margin-bottom:10px">LMS Access</h4>
+          <p style="font-size:14px;color:#6b7280;margin-bottom:12px">Already enrolled in a programme? Access your learning materials.</p>
+          <a href="lms.html" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:#2563EB;color:#fff;border-radius:8px;font-weight:600;font-size:14px">Login to LMS →</a>
+        </div>
+      </div>
+      <div class="contact-form-box">
+        <h3>Send us a Message</h3>
+        <form class="contact-form" id="contactForm" onsubmit="submitContactForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" placeholder="First name" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Last name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Work Email *</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX" />
+          </div>
+          <div class="form-group">
+            <label>Organization</label>
+            <input type="text" placeholder="Your company name" />
+          </div>
+          <div class="form-group">
+            <label>I'm interested in</label>
+            <select>
+              <option value="">Select a programme...</option>
+              <option>Communication & Presentation Skills</option>
+              <option>DISC Assessment & Profiling</option>
+              <option>Leadership Development</option>
+              <option>Lean Six Sigma</option>
+              <option>OD Interventions</option>
+              <option>POSH Compliance</option>
+              <option>Multiple / Custom Programme</option>
+              <option>LMS / Digital Learning</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="4" placeholder="Tell us about your training needs, team size, and any specific objectives..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message →</button>
+        </form>
+        <div style="display:none;text-align:center;padding:32px 0" id="contactSuccess">
+          <div style="font-size:48px;margin-bottom:16px">✅</div>
+          <h4 style="font-size:1.3rem;color:#1A3562;margin-bottom:8px">Message Sent!</h4>
+          <p style="font-size:14px;color:#6b7280">Thank you for reaching out. We'll get back to you within 24 business hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function submitContactForm(e){
+  e.preventDefault();
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('contactSuccess').style.display='block';
+}
+</script>
+</body>
+</html>
