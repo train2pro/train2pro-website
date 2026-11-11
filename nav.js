@@ -475,7 +475,7 @@ const footer=`<footer class="footer">
         </div>
         <div class="footer-contact-item">
           <span class="fc-icon">📧</span>
-          <a href="mailto:info@train2pro.in" style="color:inherit">info@train2pro.in</a>
+          <a href="mailto:info@khanjankadi.com" style="color:inherit">info@khanjankadi.com</a>
         </div>
         <div class="footer-contact-item">
           <span class="fc-icon">🌐</span>
